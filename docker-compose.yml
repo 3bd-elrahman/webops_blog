@@ -40,7 +40,7 @@ services:
      REDIS_PORT: 6379
      BUNDLE_PATH: /bundle
     volumes:
-      - ../:/rails-app
+      - .:/rails-app
       - bundle:/bundle
     ports:
       - "3000:3000"
