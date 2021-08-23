@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /comments/1
+  # PATCH/PUT /posts/:post_id/comments/comment_id
   def update
     authorize(@comment)
 
@@ -42,7 +42,7 @@ class CommentsController < ApplicationController
     end
   end
 
-  # DELETE /comments/1
+  # DELETE /posts/post_id/comments/comment_id
   def destroy
     authorize(@comment)
 
