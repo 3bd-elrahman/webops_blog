@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users,
+  resources :tags
+  resources :posts do
+    resources :comments
+
+  end
+   devise_for :users,
              controllers: {
-                 sessions: 'users/sessions',
+                sessions: 'users/sessions',
                  registrations: 'users/registrations'
              }
+
+    get '/show_member',to:'members#show'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,5 @@
+schedule_delete_post_job:
+  cron: "*/5 * * * *"
+  class: "DeletePostJob"
+  queue: default
+  active_job: true
